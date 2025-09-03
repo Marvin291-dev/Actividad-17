@@ -1,8 +1,9 @@
 import tkinter as tk
+from tkinter import Label
 
 ventana = tk.Tk()
 ventana.title("Mi primera ventana")
-ventana.geometry("300x300")
+ventana.geometry("300x325")
 
 etiqueta = tk.Label(ventana, text="Ingrese el primer numero:")
 etiqueta.pack(pady = 5)
@@ -16,7 +17,7 @@ etiqueta2.pack(pady = 5)
 entrada2 = tk.Entry(ventana)
 entrada2.pack(pady = 5)
 
-etiqueta3 = tk.Label(ventana, text=":")
+etiqueta3 = tk.Label(ventana, text="resultado:")
 etiqueta3.pack(pady = 5)
 
 entrada3 = tk.Entry(ventana)
