@@ -20,8 +20,8 @@ entrada2.pack(pady = 5)
 etiqueta3 = tk.Label(ventana, text="resultado:")
 etiqueta3.pack(pady = 5)
 
-entrada3 = tk.Entry(ventana)
-entrada3.pack(pady = 5)
+etiqueta3 = tk.Entry(ventana)
+etiqueta3.pack(pady = 5)
 
 def sumar():
     a = float(input("Ingrese el primer numero: "))
