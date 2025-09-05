@@ -53,16 +53,20 @@ def limpiar():
     entrada2.delete(0, tk.END)
     etiqueta2.config(text = "Resultado: ")
 
-boton_sumar = tk.Button(ventana, text = "Sumar", command = sumar)
+boton_sumar = tk.Button(ventana, text = "Sumar", command = sumar, background= "lightblue", fg = "red")
 boton_sumar.pack(pady = 5)
+boton_sumar.place(x=85, y=127)
 
 boton_restar = tk.Button(ventana, text = "Restar", command = restar)
 boton_restar.pack(pady = 5)
+boton_restar.place(x=190, y=127)
 
 boton_multiplicar = tk.Button(ventana, text = "Multiplicar", command = multiplicar)
 boton_multiplicar.pack(pady = 5)
+boton_multiplicar.place(x=85, y=177)
 
 boton_dividir = tk.Button(ventana, text = "Dividir", command = dividir)
 boton_dividir.pack(pady = 5)
+boton_dividir.place(x=190, y=177)
 
 ventana.mainloop()
