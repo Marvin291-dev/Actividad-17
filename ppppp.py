@@ -1,69 +1,68 @@
 import tkinter as tk
-from tkinter import Label
 
 ventana = tk.Tk()
-ventana.title("Mi primera ventana")
+ventana.title("Mi primera calculadora")
 ventana.geometry("300x325")
 
-etiqueta = tk.Label(ventana, text="Ingrese el primer numero:")
+etiqueta = tk.Label(ventana, text="Ingrese el primer numero: ")
 etiqueta.pack(pady = 5)
 
 entrada1 = tk.Entry(ventana)
 entrada1.pack(pady = 5)
 
-etiqueta2 = tk.Label(ventana, text="Ingrese el segundo numero:")
-etiqueta2.pack(pady = 5)
-
 entrada2 = tk.Entry(ventana)
 entrada2.pack(pady = 5)
 
-etiqueta3 = tk.Label(ventana, text="resultado:")
-etiqueta3.pack(pady = 5)
-
-etiqueta3 = tk.Entry(ventana)
-etiqueta3.pack(pady = 5)
+etiqueta2 = tk.Label(ventana, text="Resultado: ")
+etiqueta2.pack(pady = 5)
 
 def sumar():
-    a = float(input("Ingrese el primer numero: "))
-    b = float(input("Ingrese el segundo numero: "))
-    result = a + b
-    print(f"El resultado es: {result}")
+    try:
+        a = float(entrada1.get())
+        b = float(entrada2.get())
+        etiqueta2.config(text = f"El resultado es: {a + b}")
+    except ValueError:
+        etiqueta2.config(text = "Error ingresar numeros validos")
 
 def restar():
-    a = float(input("Ingrese el primer numero: "))
-    b = float(input("Ingrese el segundo numero: "))
-    result = a - b
-    print(f"El resultado es: {result}")
+    try:
+        a = float(entrada1.get())
+        b = float(entrada2.get())
+        etiqueta2.config(text = f"El resultado es: {a - b}")
+    except ValueError:
+        etiqueta2.config(text = "Error ingresar numeros validos")
 
 def multiplicar():
-    a = float(input("Ingrese el primer numero: "))
-    b = float(input("Ingrese el segundo numero: "))
-    result = a * b
-    print(f"El resultado es: {result}")
+    try:
+        a = float(entrada1.get())
+        b = float(entrada2.get())
+        etiqueta2.config(text = f"El resultado es: {a * b}")
+    except ValueError:
+        etiqueta2.config(text = "Error ingresar numeros validos")
 
 def dividir():
-    a = float(input("Ingrese el primer numero: "))
-    b = float(input("Ingrese el segundo numero: "))
-    result = a / b
-    print(f"El resultado es: {result}")
+    try:
+        a = float(entrada1.get())
+        b = float(entrada2.get())
+        etiqueta2.config(text = f"El resultado es: {a / b}")
+    except ValueError:
+        etiqueta2.config(text = "Error ingresar numeros validos")
 
 def limpiar():
     entrada1.delete(0, tk.END)
-    etiqueta.config(text="Escribe el numero:")
-
     entrada2.delete(0, tk.END)
-    etiqueta2.config(text="Ingrese el segundo numero:")
+    etiqueta2.config(text = "Resultado: ")
 
-boton_sumar = tk.Button(ventana, text="Sumar", command=sumar)
+boton_sumar = tk.Button(ventana, text = "Sumar", command = sumar)
 boton_sumar.pack(pady = 5)
 
-boton_restar = tk.Button(ventana, text="Restar", command=restar)
+boton_restar = tk.Button(ventana, text = "Restar", command = restar)
 boton_restar.pack(pady = 5)
 
-boton_multiplicar = tk.Button(ventana, text="Multiplicar", command=multiplicar)
+boton_multiplicar = tk.Button(ventana, text = "Multiplicar", command = multiplicar)
 boton_multiplicar.pack(pady = 5)
 
-boton_dividir = tk.Button(ventana, text="Dividir", command=dividir)
+boton_dividir = tk.Button(ventana, text = "Dividir", command = dividir)
 boton_dividir.pack(pady = 5)
 
 ventana.mainloop()
